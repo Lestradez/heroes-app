@@ -1,14 +1,13 @@
 import React, { useMemo } from 'react'
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import { useForm } from '../../hooks/useForm/useForm';
 import { getHeroesByName } from '../../selectors/getHeroesByName';
 import { HeroCard } from '../heroes/HeroCard';
 
 export const SearchScreen = () => {
 
-  const [searchParams, setSearchParams] = useSearchParams();
-  const navigate = useNavigate();
-  const q = searchParams.get('q') ? searchParams.get('q') : '';
+  const [searchParams, setSearchParams] = useSearchParams({q:''});
+  const q = searchParams.get('q');
   const [formValues, handleInputChange] = useForm({
     searchText: q,
   });
@@ -16,8 +15,7 @@ export const SearchScreen = () => {
   const heroesFiltered = useMemo(() => getHeroesByName(q), [q]);
   const handleSearch = (e) => {
     e.preventDefault();
-    setSearchParams(searchText)
-    navigate(`?q=${searchText}`)
+    setSearchParams({q: searchText})
   }
   return (
     <div>
