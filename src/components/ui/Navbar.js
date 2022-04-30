@@ -16,25 +16,34 @@ export const Navbar = () => {
         <div className="navbar-nav">
 
           <NavLink
-            className={({isActive}) => "nav-item nav-link" + (isActive ?' demo' : '')}
+            className={({ isActive }) => "nav-item nav-link" + (isActive ? ' demo' : '')}
             to="/marvel"
           >
             Marvel
           </NavLink>
 
           <NavLink
-            className={({isActive}) => "nav-item nav-link" + (isActive ?' demo' : '')}
+            className={({ isActive }) => "nav-item nav-link" + (isActive ? ' demo' : '')}
             to="/dc"
           >
             DC
           </NavLink>
+
+          <NavLink
+            className={({ isActive }) => "nav-item nav-link" + (isActive ? ' demo' : '')}
+            to="/search"
+          >
+            Search
+          </NavLink>
+
         </div>
       </div>
+
 
       <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 justify-content-end">
         <ul className="navbar-nav ml-auto">
           <NavLink
-            className={({isActive}) => "nav-item nav-link" + (isActive ?' demo' : '')}
+            className={({ isActive }) => "nav-item nav-link" + (isActive ? ' demo' : '')}
             to="/login"
           >
             Logout
