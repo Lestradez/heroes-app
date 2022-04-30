@@ -12,7 +12,7 @@ export const HeroCard = (
   }
 ) => {
   return (
-    <div className='col-sm-6 col-lg-4 mb-2'>
+    <div className='col-sm-6 col-lg-4 mb-2 animate__animated animate__fadeIn'>
       <div className='card'>
         <div className='row no-gutters'>
           <div className='col-md-4'>

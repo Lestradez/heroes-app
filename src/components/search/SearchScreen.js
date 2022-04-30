@@ -47,7 +47,7 @@ export const SearchScreen = () => {
                 <div className='col-sm-5 col-lg-2 mb-6 d-flex justify-content-end'>
                   <button
                     type='submit'
-                    className='btn m-1 btn-block btn-outline-primary'
+                    className='btn m-1 btn-block btn-outline-primary animate__animated animate__pulse animate__delay-2s animate__fast animate__repeat-3	'
                   >
                     Search...
                   </button>
@@ -61,7 +61,24 @@ export const SearchScreen = () => {
         <div className='row'>
           <h4>Results</h4>
           <hr />
-          <div className="row justify-content-center animate__animated animate__fadeIn" data-masonry='{"percentPosition": true }' >
+          <div className="row justify-content-center " data-masonry='{"percentPosition": true }' >
+
+            {
+              (q==='')
+                &&
+                <div className='alert alert-info animate__animated animate__fadeIn'>
+                  Search for a Hero by name or letters. Type * to show all
+                </div>
+            }
+
+            {
+              (q!=='' && heroesFiltered.length===0)
+                &&
+                <div className='alert alert-danger animate__animated animate__headShake animate__infinite'>
+                  No search results for "{q}"
+                </div>
+            }
+
 
             {
               heroesFiltered.map(hero => (

@@ -7,7 +7,7 @@ export const HeroList = ({ publisher }) => {
   const heroes = useMemo(() => getHeroesByPublisher ( publisher ), [ publisher ]) ;
   return (
     
-    <div className="row justify-content-center animate__animated animate__fadeIn" data-masonry='{"percentPosition": true }' >
+    <div className="row justify-content-center" data-masonry='{"percentPosition": true }' >
       {
         heroes.map ( hero => (
           <HeroCard 
