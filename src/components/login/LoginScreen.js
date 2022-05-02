@@ -8,8 +8,7 @@ export const LoginScreen = () => {
   const navigate = useNavigate();
   const { dispatch } = useContext( AuthContext );
   
-  const handleLogin = ()=> {
-    
+  const handleLogin = ()=> {    
     dispatch({
       type: types.login,
       payload: {
