@@ -1,3 +1,4 @@
+
 export const heroes = [
   {
       'id': 'dc-batman',

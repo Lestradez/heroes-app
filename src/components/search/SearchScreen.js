@@ -17,6 +17,7 @@ export const SearchScreen = () => {
     e.preventDefault();
     setSearchParams({q: searchText})
   }
+  
   return (
     <div>
       <h1>
