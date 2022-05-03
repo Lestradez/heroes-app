@@ -3,6 +3,7 @@ import { HeroList } from '../heroes/HeroList'
 
 export const DcScreen = () => {
   
+  return(
     <div>
       <h1>
         DC Heroes
@@ -10,5 +11,5 @@ export const DcScreen = () => {
       <hr/>
       <HeroList publisher={'DC Comics'} />
     </div>
-  
+  )
 }
